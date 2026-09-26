@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07142f"><title>LEARNOVA AI</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="app-shell">
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">🧠<span>✦</span></div>
+    <div><div class="brand-name">LEARNOVA <b>AI</b></div><div class="tagline">Learn smarter. Research deeper.</div></div>
+  </div>
+  <button class="avatar">●</button>
+</header>
+
+<section class="hero">
+  <h1>Good morning! 👋</h1><p>What would you like to learn today?</p>
+  <form id="chatForm" class="searchbox"><span>✦</span><input id="question" placeholder="Ask anything..." autocomplete="off"><button>➤</button></form>
+</section>
+
+<section class="cards">
+<button class="mode-card blue" data-mode="study"><strong>🎓 Study Mode</strong><small>Learn step-by-step with clear explanations</small></button>
+<button class="mode-card teal" data-mode="research"><strong>⌕ Research Mode</strong><small>Explore topics and organize your research</small></button>
+<button class="mode-card purple" id="pdfButton"><strong>📄 Ask My PDF</strong><small>Upload notes and ask questions</small></button>
+<button class="mode-card gold" data-mode="study"><strong>✓ Homework Help</strong><small>Understand problems with explanations</small></button>
+</section>
+
+<section class="quick"><div class="section-title">Quick Actions</div>
+<div class="quick-grid">
+<button data-action="quiz">🧠<span>Generate Quiz</span></button>
+<button data-action="planner">📅<span>Study Plan</span></button>
+<button data-action="scan">📷<span>Scan Question</span></button>
+<button data-action="voice">🎤<span>Ask by Voice</span></button>
+</div></section>
+
+<button class="wide-action" data-action="explain">💡 <b>Explain It Simply</b><span>Complex topics made easy. →</span></button>
+<button class="wide-action ghana">🇬🇭 <b>Ghana Study Hub</b><span>WASSCE · SHS · Tertiary · Admissions →</span></button>
+
+<input id="pdfInput" type="file" accept="application/pdf,.pdf" hidden>
+
+<section id="pdfPanel" class="overlay hidden">
+<div class="panel">
+<div class="panel-head"><div><b>📄 Ask My PDF</b><small>Upload a PDF and learn from it</small></div><button id="closePdf">×</button></div>
+<div id="pdfDrop" class="drop"><div class="drop-icon">📚</div><b>Choose a PDF</b><p>Maximum 20 MB</p><button id="choosePdf">Select PDF</button></div>
+<div id="pdfStatus" class="status hidden"></div>
+<div id="pdfTools" class="pdf-tools hidden">
+<button data-pdf-action="summary">📌 Summarize PDF</button>
+<button data-pdf-action="simple">💡 Explain Simply</button>
+<button data-pdf-action="quiz">🧠 Make a Quiz</button>
+</div>
+<div id="pdfMessages" class="messages"></div>
+<form id="pdfAskForm" class="bottom-input hidden"><input id="pdfQuestion" placeholder="Ask something about this PDF..."><button>➤</button></form>
+</div>
+</section>
+
+<section id="chatPanel" class="overlay hidden">
+<div class="panel">
+<div class="panel-head"><b id="modeTitle">AI Chat</b><button id="closeChat">×</button></div>
+<div id="messages" class="messages"></div>
+<form id="chatFormBottom" class="bottom-input"><input id="questionBottom" placeholder="Type your question..."><button>➤</button></form>
+</div>
+</section>
+
+<nav class="bottom-nav"><button class="active">⌂<span>Home</span></button><button data-action="chat">▣<span>Chat</span></button><button data-mode="study">▤<span>Study</span></button><button data-mode="research">⌕<span>Research</span></button><button>◯<span>Profile</span></button></nav>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
